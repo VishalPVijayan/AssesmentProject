@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val repository = DataRepository(DataApi())
         GlobalScope.launch (Dispatchers.Main){
             val allData = repository.getData()
-            Toast.makeText(this@MainActivity,allData.toString(), Toast.LENGTH_LONG)
+            Toast.makeText(this@MainActivity,allData.toString(), Toast.LENGTH_LONG).show()
         }
     }
 }
