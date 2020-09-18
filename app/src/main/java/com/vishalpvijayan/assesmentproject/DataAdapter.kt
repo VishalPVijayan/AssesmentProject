@@ -30,7 +30,7 @@ class DataAdapter (
 
         holder.itemView.txtHeight.text =itemHolder.height.toString()
         holder.itemView.txtWidth.text =itemHolder.width.toString()
-        holder.itemView.txtDescription.text =itemHolder.id.toString()
+        holder.itemView.txtTitle.text =itemHolder.id.toString()
 
 
     }
