@@ -39,6 +39,7 @@ class DataFragment : Fragment() {
     }
 
     private fun fetchData() {
+        refreshLayout.isRefreshing = true
         val api = DataApi()
         val repository = DataRepository(api)
 
@@ -52,6 +53,7 @@ class DataFragment : Fragment() {
                 it.layoutManager = LinearLayoutManager(requireContext())
                 it.setHasFixedSize(true)
                 it.adapter = DataAdapter(data)
+                refreshLayout.isRefreshing = false
             }
         })
     }

@@ -11,6 +11,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/design2"
+        android:layout_margin="15dp"
+        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -33,7 +36,10 @@
             android:text="Title"
             android:textAlignment="center"
             android:textSize="20dp"
+            android:padding="5dp"
             android:textStyle="bold"
+            android:background="@drawable/design"
+            android:fontFamily="@font/sacramento"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -45,6 +51,9 @@
             android:layout_marginTop="20dp"
             android:text="@{dataApi.author}"
             android:textSize="18dp"
+            android:padding="5dp"
+            android:background="@drawable/design"
+            android:fontFamily="@font/sacramento"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
@@ -56,6 +65,9 @@
             android:layout_marginTop="20dp"
             android:layout_margin="10dp"
             android:textSize="18dp"
+            android:padding="5dp"
+            android:background="@drawable/design"
+            android:fontFamily="@font/sacramento"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDescription"/>
 
@@ -66,7 +78,10 @@
             android:layout_marginTop="8dp"
             android:id="@+id/txtHeight"
             android:text="Height"
+            android:padding="5dp"
             android:textSize="18dp"
+            android:background="@drawable/design"
+            android:fontFamily="@font/sacramento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtWidth"
             app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
@@ -76,8 +91,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:padding="5dp"
             android:text="@{dataApi.url}"
             android:textSize="18dp"
+            android:background="@drawable/design"
+            android:fontFamily="@font/sacramento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
