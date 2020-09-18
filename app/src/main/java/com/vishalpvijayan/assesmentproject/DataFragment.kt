@@ -6,7 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.data_fragment.*
 
 class DataFragment : Fragment() {
 
@@ -29,6 +33,16 @@ class DataFragment : Fragment() {
 
         viewInitalizer = ViewModelInstailizer(repository)
         viewModel = ViewModelProviders.of(this, viewInitalizer).get(DataViewModel ::class.java)
-        
+
+        viewModel.getData()
+
+        viewModel.data.observe(viewLifecycleOwner, Observer { data ->
+            recyclerView.also {
+                it.layoutManager = LinearLayoutManager(requireContext())
+                it.setHasFixedSize(true)
+                it.adapter = DataAdapter(data)
+            }
+        })
+
     }
 }
