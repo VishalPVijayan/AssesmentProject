@@ -28,6 +28,17 @@ class DataFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        fetchData()
+
+        refreshLayout.setOnRefreshListener {
+            fetchData();
+        }
+
+
+
+    }
+
+    private fun fetchData() {
         val api = DataApi()
         val repository = DataRepository(api)
 
@@ -43,6 +54,5 @@ class DataFragment : Fragment() {
                 it.adapter = DataAdapter(data)
             }
         })
-
     }
 }
