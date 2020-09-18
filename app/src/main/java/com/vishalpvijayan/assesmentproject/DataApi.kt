@@ -14,7 +14,7 @@ interface DataApi {
     @GET("v2/list?")
 
     //suspending function Coroutines
-    suspend fun getMovies(@NonNull @Query("page") page: Int?,
+    suspend fun getData(@NonNull @Query("page") page: Int?,
                           @Query("limit") limit: Int?):
             Response<List<DataResponse>>
 
