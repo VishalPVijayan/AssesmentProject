@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val repository = DataRepository(DataApi())
-        GlobalScope.launch (Dispatchers.Main){
-            val allData = repository.getData()
-            Toast.makeText(this@MainActivity,allData.toString(), Toast.LENGTH_LONG).show()
-        }
+//CHECKING WEATHER THE MAINACTIVITY FETCH THE DATA
+//        val repository = DataRepository(DataApi())
+//        GlobalScope.launch (Dispatchers.Main){
+//            val allData = repository.getData()
+//            Toast.makeText(this@MainActivity,allData.toString(), Toast.LENGTH_LONG).show()
+//        }
     }
 }

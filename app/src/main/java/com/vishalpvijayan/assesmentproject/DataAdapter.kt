@@ -1,5 +1,6 @@
 package com.vishalpvijayan.assesmentproject
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -31,6 +32,22 @@ class DataAdapter (
         holder.itemView.txtHeight.text =itemHolder.height.toString()
         holder.itemView.txtWidth.text =itemHolder.width.toString()
         holder.itemView.txtTitle.text =itemHolder.id.toString()
+
+        holder.recyclerviewDataBinding.root.setOnClickListener {
+            holder.recyclerviewDataBinding.root.setOnClickListener {
+
+
+                AlertDialog.Builder(it.context)
+                    .setTitle("You Selected ")
+                    .setMessage("\n Id : "+itemHolder.id +" \n Author Name : "+itemHolder.author+ "\n " +
+                            "Height : "+itemHolder.height+ "\n Width : "+itemHolder.width +"\n Url : "+itemHolder.url)
+                    .setCancelable(false)
+                    .setPositiveButton("Okay"){ dialog, which -> dialog.dismiss() }
+                    .create()
+                    .show()
+            }
+
+        }
 
 
     }
